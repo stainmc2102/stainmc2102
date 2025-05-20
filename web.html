@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stain Kagenou | Portfolio & Donate</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(to right, #1e3c72, #2a5298);
+            color: #fff;
+            display: flex;
+        }
+        /* MENU */
+        
+        .sidebar {
+            width: 240px;
+            background: rgba(0, 0, 0, 0.5);
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding-top: 60px;
+            transition: 0.3s ease;
+        }
+        
+        .sidebar h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1.3em;
+        }
+        
+        .sidebar a {
+            display: block;
+            padding: 15px 25px;
+            color: #00ffff;
+            text-decoration: none;
+            transition: background 0.3s;
+            font-weight: bold;
+        }
+        
+        .sidebar a:hover,
+        .sidebar a.active {
+            background: rgba(0, 255, 255, 0.2);
+            color: #fff;
+        }
+        /* MENU TOGGLE */
+        
+        .menu-toggle {
+            position: fixed;
+            top: 15px;
+            left: 15px;
+            font-size: 1.5em;
+            color: #00ffff;
+            z-index: 1000;
+            cursor: pointer;
+        }
+        
+        .main-content {
+            margin-left: 240px;
+            padding: 40px 30px;
+            flex: 1;
+            transition: 0.3s ease;
+        }
+        
+        .hidden {
+            display: none !important;
+        }
+        /* PORTFOLIO */
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(15px);
+            padding: 40px 30px;
+            border-radius: 20px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+        
+        .container img.avatar {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 6px solid #00ffff;
+            margin-bottom: 20px;
+            transition: 0.6s;
+        }
+        
+        h1 {
+            font-size: 2.5em;
+            background: linear-gradient(to right, #00c6ff, #0072ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .tabs {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 30px;
+            gap: 15px;
+        }
+        
+        .tabs button {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 30px;
+            background: linear-gradient(to right, #00c6ff, #0072ff);
+            color: #fff;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        
+        .tabs button.active {
+            background: #fff;
+            color: #0072ff;
+        }
+        
+        .tab-content {
+            display: none;
+            margin-top: 30px;
+            text-align: left;
+            animation: fadeIn 0.5s ease forwards;
+            opacity: 0;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+        /* DONATE */
+        
+        .donate-form {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 30px;
+            border-radius: 15px;
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: left;
+        }
+        
+        .donate-form h2 {
+            margin-bottom: 20px;
+            font-size: 1.8em;
+            color: #00ffff;
+        }
+        
+        .donate-form label {
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 5px;
+        }
+        
+        .donate-form input,
+        .donate-form select {
+            width: 100%;
+            padding: 10px;
+            border-radius: 8px;
+            border: none;
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            font-size: 1em;
+        }
+        
+        .donate-form button {
+            margin-top: 20px;
+            width: 100%;
+            padding: 12px;
+            background: linear-gradient(to right, #00c6ff, #0072ff);
+            color: #fff;
+            font-size: 1em;
+            font-weight: bold;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        
+        .donate-form button:hover {
+            background: #fff;
+            color: #0072ff;
+        }
+        
+        @media screen and (max-width: 768px) {
+            .sidebar {
+                width: 200px;
+            }
+            .main-content {
+                margin-left: 200px;
+                padding: 20px;
+            }
+        }
+        
+        @media screen and (max-width: 600px) {
+            .sidebar {
+                display: none;
+            }
+            .main-content {
+                margin-left: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="menu-toggle" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+    </div>
+
+    <div class="sidebar" id="sidebar">
+        <h2>MENU</h2>
+        <a href="#" class="active" onclick="showSection(event, 'portfolio')">📁 Portfolio</a>
+        <a href="#" onclick="showSection(event, 'donate')">💳 Donate</a>
+    </div>
+
+    <div class="main-content">
+        <!-- PORTFOLIO -->
+        <div id="portfolio" class="container section">
+            <img src="https://yt3.googleusercontent.com/Phv9siAXXljMBcY8A9sExm9CBXq76-4KWqDasGa83_26W7gqRcHaC_gI3MY0ufsOq0-I-5gB0A=s160-c-k-c0x00ffffff-no-rj" alt="Avatar" class="avatar" />
+            <h1>Stain Kagenou</h1>
+
+            <div class="tabs">
+                <button class="tab-btn active" onclick="showTab(event, 'info')">Thông tin</button>
+                <button class="tab-btn" onclick="showTab(event, 'gaming')">Game</button>
+                <button class="tab-btn" onclick="showTab(event, 'coding')">Lập trình</button>
+                <button class="tab-btn" onclick="showTab(event, 'contact')">Liên hệ</button>
+            </div>
+
+            <div id="info" class="tab-content active">
+                <p><strong>Họ tên:</strong> Đàm Nguyễn Sinh Thành</p>
+                <p><strong>Biệt danh:</strong> Stain Kagenou</p>
+            </div>
+
+            <div id="gaming" class="tab-content">
+                <p>Kỹ năng chơi game: FPS, PvP, Teamplay</p>
+            </div>
+
+            <div id="coding" class="tab-content">
+                <p>Kỹ năng lập trình: HTML, CSS, JS, Lua, Python</p>
+            </div>
+
+            <div id="contact" class="tab-content">
+                <p>Email: thanhdzd02@gmail.com</p>
+            </div>
+        </div>
+
+        <!-- DONATE -->
+        <div id="donate" class="section hidden">
+            <div class="donate-form">
+                <h2>Ủng hộ bằng Thẻ hoặc Chuyển khoản</h2>
+
+                <label>Loại nạp:</label>
+                <select>
+                    <option value="card">Thẻ cào</option>
+                    <option value="bank">Chuyển khoản</option>
+                </select>
+
+                <label>Mệnh giá:</label>
+                <input type="number" placeholder="Ví dụ: 10000">
+
+                <label>Serial:</label>
+                <input type="text" placeholder="Nhập số serial">
+
+                <label>Mã thẻ / Nội dung chuyển khoản:</label>
+                <input type="text" placeholder="Nhập mã thẻ hoặc ND CK">
+
+                <button>Nạp ngay</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- SCRIPT -->
+    <script>
+        function showTab(evt, tabId) {
+            document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+            document.getElementById(tabId).classList.add('active');
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+            evt.currentTarget.classList.add('active');
+        }
+
+        function showSection(evt, sectionId) {
+            // Ẩn tất cả section
+            document.querySelectorAll('.section').forEach(s => s.classList.add('hidden'));
+
+            // Hiện section được chọn
+            document.getElementById(sectionId).classList.remove('hidden');
+
+            // Cập nhật active menu
+            document.querySelectorAll('.sidebar a').forEach(a => a.classList.remove('active'));
+            evt.currentTarget.classList.add('active');
+        }
+
+        function toggleMenu() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.style.display = (sidebar.style.display === 'none' || sidebar.style.display === '') ? 'block' : 'none';
+        }
+    </script>
+</body>
+
+</html>

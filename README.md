@@ -103,9 +103,21 @@ const stain = {
 
 <div align="center">
 
-[🌐 Website](https://stainmc2102.vercel.app) •
-[📘 Facebook](https://www.facebook.com/damnguyensinhthanh) •
-[💻 GitHub](https://github.com/stainmc2102)
+<a href="https://stainmc2102.vercel.app">
+<img src="https://img.shields.io/badge/Website-00D9FF?style=for-the-badge&logo=googlechrome&logoColor=white">
+</a>
+
+<a href="https://www.facebook.com/damnguyensinhthanh">
+<img src="https://img.shields.io/badge/Facebook-0866FF?style=for-the-badge&logo=facebook&logoColor=white">
+</a>
+
+<a href="https://github.com/stainmc2102">
+<img src="https://img.shields.io/badge/GitHub-000000?style=for-the-badge&logo=github&logoColor=white">
+</a>
+
+<a href="https://discord.com/users/1339221760322834494">
+<img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white">
+</a>
 
 </div>
 

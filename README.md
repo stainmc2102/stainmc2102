@@ -51,41 +51,6 @@ const stain = {
 
 </div>
 
----
-
-## 📊 GitHub Stats
-
-<div align="center">
-
-<img width="49%" src="https://github-readme-stats.vercel.app/api?username=stainmc2102&show_icons=true&theme=tokyonight&hide_border=true&count_private=true"/>
-
-<img width="49%" src="https://github-readme-streak-stats.herokuapp.com/?user=stainmc2102&theme=tokyonight&hide_border=true"/>
-
-<br>
-
-<img width="60%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=stainmc2102&layout=compact&theme=tokyonight&hide_border=true"/>
-
-</div>
-
----
-
-## 🏆 GitHub Trophies
-
-<div align="center">
-
-<img src="https://github-profile-trophy.vercel.app/?username=stainmc2102&theme=tokyonight&no-frame=true&no-bg=true&column=7"/>
-
-</div>
-
----
-
-## 📈 Contribution Graph
-
-<div align="center">
-
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=stainmc2102&theme=tokyo-night&hide_border=true"/>
-
-</div>
 
 ---
 

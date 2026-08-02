@@ -104,19 +104,16 @@ const stain = {
 <div align="center">
 
 <a href="https://stainmc2102.vercel.app">
-<img src="https://img.shields.io/badge/Website-00D9FF?style=for-the-badge&logo=googlechrome&logoColor=white">
+    <img src="https://img.shields.io/badge/🌐%20Portfolio-00D9FF?style=for-the-badge&logo=vercel&logoColor=white"/>
 </a>
-
 <a href="https://www.facebook.com/damnguyensinhthanh">
-<img src="https://img.shields.io/badge/Facebook-0866FF?style=for-the-badge&logo=facebook&logoColor=white">
+    <img src="https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white"/>
 </a>
-
 <a href="https://github.com/stainmc2102">
-<img src="https://img.shields.io/badge/GitHub-000000?style=for-the-badge&logo=github&logoColor=white">
+    <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"/>
 </a>
-
 <a href="https://discord.com/users/1339221760322834494">
-<img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white">
+    <img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white"/>
 </a>
 
 </div>

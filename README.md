@@ -53,7 +53,7 @@ const stain = {
 
 <div align="center">
 
-https://lanyard.cnrad.dev/api/1339221760322834494?theme=dark&bg=0d1117&animated=true&showDisplayName=true&hideDiscrim=true&borderRadius=30px
+[![Discord Presence](https://lanyard.cnrad.dev/api/1339221760322834494?theme=dark&bg=0d1117&animated=true&showDisplayName=true&hideDiscrim=true&borderRadius=30px)](https://discord.com/users/1339221760322834494)
 
 </div>
 
